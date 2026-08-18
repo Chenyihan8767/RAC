@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# RAC
-RISC-V AI Accelerator, developed with chisel.
-=======
 # RISC-V AI 加速器（Chisel）
 
 使用 **Chisel 6.7.0** 开发的、面向 RISC-V 主核的 **INT8 GEMM AI 加速器**（AXI4-Lite MMIO 外设），
@@ -80,4 +76,3 @@ make -C sw all asm
 - Chisel 6.7.0 / Scala 2.13.14 / sbt 1.10.7 / JDK 17
 - Verilator 5.030（源码安装，含 PCH 补丁，见 AGENT.md）
 - riscv64-unknown-elf-gcc 13.2.0（rv32im）
->>>>>>> master
