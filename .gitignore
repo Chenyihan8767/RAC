@@ -1,0 +1,11 @@
+target/
+generated/
+project/target/
+project/project/
+*.class
+*.log
+.idea/
+.bsp/
+.vscode/
+.bloop/
+test_run_dir/
