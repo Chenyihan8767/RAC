@@ -9,3 +9,4 @@ project/project/
 .vscode/
 .bloop/
 test_run_dir/
+.metals/
