@@ -60,4 +60,6 @@ class QuantizerTest extends AnyFlatSpec with ChiselScalatestTester {
       }
     }
   }
+
+  println(s"${TestRefs.quant(-3000, 0, relu = true)}")
 }

@@ -11,10 +11,19 @@ object TestRefs {
       }
     }
 
+  def transpose(a: Seq[Seq[Int]]): Seq[Seq[Int]] =
+    (0 until a(0).length).map { i =>
+      (0 until a.length).map { j => a(j)(i)}
+    }
   /** INT8 quantization reference: sat8(relu(acc >> shift)). */
   def quant(acc: Int, shift: Int, relu: Boolean): Int = {
-    var v = acc >> shift
-    if (relu && v < 0) v = 0
-    if (v > 127) 127 else if (v < -128) -128 else v
+    //var v = acc >> shift
+    //if (relu && v < 0) v = 0
+    //if (v > 127) 127 else if (v < -128) -128 else v
+    val v = acc >> shift
+    if (relu && v < 0) 0
+    else if (v > 127) 127
+    else if (v < -128) -128
+    else v
   }
 }
